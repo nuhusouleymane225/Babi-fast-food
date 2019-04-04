@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Babi Fast-Food | Commandes</title>
+  <link rel="stylesheet" href="css/orders.css">
+  <link rel="icon" type="image/png" href="img/logo.png">
+  <script src="js/fetch/authorize-user.js"></script>
+  <script src="js/fetch/jwt-decode.min.js"></script>
+</head>
+
+<body>
+  <div class="dashboard">
+    <div class="cart-modal">
+      <div class="dashboard-menu">
+        <div class="menu-top">
+          <div class="welcome">
+            <a href="menu.html"><img src="img/logo.png" alt="logo"></a>
+            <span><a href="menu.html">Babi Fast Food</a> </span>
+          </div>
+          <div class="menu-options">
+            <a href="add-menu.html">
+              <div class="menu">Ajouter Item &#10148;</div>
+            </a>
+            <a href="menu-admin.html">
+              <div class="menu">Menus &#10148;</div>
+            </a>
+            <a href="#">
+              <div class="menu" id="allOrders">Toutes les commandes &#10148;</div>
+            </a>
+            <a href="#">
+              <div class="menu" id="newOrders">Nouvelles commandes &#10148;</div>
+            </a>
+            <a href="#">
+              <div class="menu" id="processingOrders">En cours &#10148;</div>
+            </a>
+            <a href="#">
+              <div class="menu" id="cancelledOrders">Annulées &#10148;</div>
+            </a>
+            <a href="#">
+              <div class="menu" id="completedOrders">Effectuées &#10148;</div>
+            </a>
+            <a href="#">
+              <div class="menu logout">Logout &#10148;</div>
+            </a>
+          </div>
+        </div>
+        <div class="menu-bottom"></div>
+      </div>
+    </div>
+
+
+    <div class="dashboard-content">
+
+      <div class="toggle-menu" id="toggle-menu">
+        <strong>options</strong><span>&#10149;</span>
+      </div>
+
+      <div class="dashboard-content-bg">
+        <div class="pageAlert padAlertDiv">
+
+        </div>
+        <div class="page-title all-orders">
+          <div>LISTE DE COMMANDE DE PLATS</div>
+        </div>
+        <div class="orders-list">
+          <table class="all-orders-table">
+            <tr>
+              <th>ID</th>
+              <th>Date</th>
+              <th>Telephone</th>
+              <th>Localisation</th>
+              <th class="items-head">Commandes</th>
+              <th>Total</th>
+              <th>Status</th>
+            </tr>
+          </table>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="modal">
+    <div class="specific-order">
+      <div class="order-details">
+        <div class="order-title">
+
+        </div>
+        <div class="order-data">
+
+        </div>
+      </div>
+      <div class="user-details">
+        <div class="user-title">
+
+        </div>
+        <div class="user-data">
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-top">&#9652;</div>
+  <a href="menu.html">
+    <div class="user-front">View menu</div>
+  </a>
+
+  <footer class="footer">
+    &copy; <script>
+      document.write(new Date().getFullYear());
+    </script> <strong>Babi Fast-Food</strong> developed & designed by <em>Tsukoyomi</em>
+  </footer>
+
+  <script src="js/fetch/utility.js"></script>
+  <script src="js/fetch/orders-admin.js"></script>
+  <script src="js/scroll.js"></script>
+  <script src="js/fetch/toggle-menu.js"></script>
+  <script src="js/fetch/logout.js"></script>
+</body>
+
+</html>

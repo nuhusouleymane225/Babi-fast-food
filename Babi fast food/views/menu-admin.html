@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>BABI FAST-FOOD | Menus</title>
+  <link rel="stylesheet" href="css/orders.css">
+  <link rel="icon" type="image/png" href="img/logo.png">
+  <script src="js/fetch/authorize-user.js"></script>
+  <script src="js/fetch/jwt-decode.min.js"></script>
+</head>
+
+<body>
+  <div class="dashboard">
+    <div class="cart-modal">
+      <div class="dashboard-menu">
+        <div class="menu-top">
+          <div class="welcome">
+            <a href="menu.html"><img src="img/logo.png" alt="logo"></a>
+            <span><a href="menu.html">Babi Fast Food</a> </span>
+          </div>
+          <div class="menu-options">
+            <a href="add-menu.html">
+              <div class="menu menu1">Ajouter Item &#10148;</div>
+            </a>
+            <a href="#">
+              <div class="menu menu1">Menus &#10148;</div>
+            </a>
+            <a href="orders-admin.html">
+              <div class="menu ">Toutes les commandes &#10148;</div>
+            </a>
+            <a href="#">
+              <div class="menu logout">Logout &#10148;</div>
+            </a>
+          </div>
+        </div>
+        <div class="menu-bottom"></div>
+      </div>
+    </div>
+
+    <div class="dashboard-content">
+      <div class="toggle-menu" id="toggle-menu">
+        <strong>options</strong><span>&#10149;</span>
+      </div>
+      <div class="dashboard-content-bg">
+        <div class="pageAlert padAlertDiv">
+
+        </div>
+        <div class="page-title">LISTE DES MENUS</div>
+
+        <div class="orders-list">
+          <table class="all-menu-table">
+            <tr>
+              <th>ID</th>
+              <th>Menu</th>
+              <th>Image</th>
+              <th>Categorie</th>
+              <th>Description</th>
+              <th>Quantité</th>
+              <th>Prix</th>
+              <th>Modifier</th>
+            </tr>
+          </table>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <div class="modal delete-modal">
+    <div class="pageAlert">
+
+    </div>
+    <div class="confirm-form">
+      <form id="delete-form">
+        <div class="confirm-text">Sure vous voulez supprimer?</div>
+        <input type="submit" value="delete">
+      </form>
+    </div>
+  </div>
+
+  <div class="scroll-top">&#9652;</div>
+  <a href="menu.html">
+    <div class="user-front">Voir menu</div>
+  </a>
+
+  <footer class="footer">
+    &copy; <script>
+      document.write(new Date().getFullYear());
+    </script> <strong>BABI FAST-FOOD</strong> developed & designed by <em>Tsukoyomi</em>
+  </footer>
+
+  <script src="js/scroll.js"></script>
+  <script src="js/fetch/utility.js"></script>
+  <script src="js/fetch/menu-admin.js"></script>
+  <script src="js/fetch/toggle-menu.js"></script>
+  <script src="js/fetch/logout.js"></script>
+</body>
+
+</html>

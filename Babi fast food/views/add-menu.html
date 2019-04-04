@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>BABI FAST-FOOD | Créer Menu</title>
+  <link rel="stylesheet" href="css/orders.css">
+  <link rel="icon" type="image/png" href="img/logo.png">
+  <script src="js/fetch/authorize-user.js"></script>
+  <script src="js/fetch/jwt-decode.min.js"></script>
+</head>
+
+<body>
+  <div class="dashboard">
+    <div class="cart-modal">
+
+      <div class="dashboard-menu">
+        <div class="menu-top">
+          <div class="welcome">
+            <a href="menu.html"><img src="img/logo.png" alt="logo"></a>
+            <span><a href="menu.html">Fast Food Fast</a> </span>
+          </div>
+          <div class="menu-options">
+            <a href="#">
+              <div class="menu menu1">Ajouter Item &#10148;</div>
+            </a>
+            <a href="menu-admin.html">
+              <div class="menu menu1"> Menus &#10148;</div>
+            </a>
+            <a href="orders-admin.html">
+              <div class="menu">Toutes les commandes &#10148;</div>
+            </a>
+            <a href="#">
+              <div class="menu logout">Logout &#10148;</div>
+            </a>
+          </div>
+        </div>
+        <div class="menu-bottom"></div>
+      </div>
+
+    </div>
+
+    <div class="dashboard-content">
+
+      <div class="toggle-menu" id="toggle-menu">
+        <strong>options</strong><span>&#10149;</span>
+      </div>
+
+      <div class="dashboard-content-bg">
+        <div class="pageAlert padAlertDiv"></div>
+        <div class="page-title">Ajouter plat</div>
+        <div class="add-food-item">
+          <form id="postmenu">
+            <label for="item">Plat: <span class="formAlert"></span></label>
+            <input type="text" id="menu" class="menuItem menuName" placeholder="Plat">
+            <label for="description">Description: <span class="formAlert"></span></label>
+            <input type="text" id="description" class="description menuDescription" placeholder="Descrire plat">
+            <label for="category">Categorie: <span class="formAlert"></span></label>
+            <input type="text" id="category" class="category menuCategory" placeholder="Categorie">
+            <label for="imageURL">Image: <span class="formAlert"></span></label>
+            <input type="text" hidden class="menuImageURL" id="menuImageURL">
+            <input type="file" accept="image/*" id="imageURL" class="imageURL">
+            <div class="sub-input">
+              <div class="price">
+                <label for="price">Prix: <span class="formAlert"></span></label>
+                <input type="number" id="price" class="price menuPrice" placeholder="Prix" maxlength="6">
+              </div>
+              <div class="quantity">
+                <label for="quantity">Quantité: <span class="formAlert"></span></label>
+                <input type="number" id="quantity" class="quantity menuQuantity" placeholder="Quantité disponible"
+                  maxlength="6">
+              </div>
+            </div>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Cancel" class="reset-form">
+          </form>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <div class="scroll-top">&#9652;</div>
+  <a href="menu.html">
+    <div class="user-front">Voir menu</div>
+  </a>
+
+  <footer class="footer">
+    &copy; <script>
+      document.write(new Date().getFullYear());
+    </script> <strong>BABI FAST-FOOD</strong> developed & designed by <em>Tsukoyomi</em>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+  <script src="js/scroll.js"></script>
+  <script src="js/fetch/utility.js"></script>
+  <script src="js/fetch/post-menu.js"></script>
+  <script src="js/fetch/toggle-menu.js"></script>
+  <script src="js/fetch/logout.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Babi Fast-food | Commandes</title>
+  <link rel="stylesheet" href="css/orders.css">
+  <link rel="icon" type="image/png" href="img/logo.png">
+</head>
+
+<body>
+  <div class="dashboard">
+    <div class="dashboard-menu">
+      <div class="menu-top">
+        <div class="welcome">
+         <a href="food-items.html"><img src="img/logo.png" alt="logo"></a>
+          <span><a href="food-items.html">Babi Fast-Food</a> </span>
+        </div>
+        <div class="menu menu1" id="En attente">Commandes en attente &#10148;</div>
+        <div class="menu menu1" id="Acceptées">Commandes accèptées &#10148;</div>
+        <div class="menu menu2" id="Réfusé">Commandes refusées &#10148;</div>
+        <div class="menu menu3" id="effectué">Commandes effectuées &#10148;</div>
+        <div class="menu"><span class="all-orders">Total &#10148; 8</span></div>
+      </div>
+      <div class="menu-bottom"></div>
+    </div>
+    <div class="dashboard-content">
+      <div class="dashboard-content-bg">
+        <div class="page-title">HISTORIQUE DES COMMANDES</div>
+        <div class="orders-list">
+          <div class="order-history column-head">
+            <div class="order-column id">ID</div>
+            <div class="order-column date">Date</div>
+            <div class="order-column item">Item</div>
+            <div class="order-column qty">Qté</div>
+            <div class="order-column">Cout(&#8358;)</div>
+            <div class="order-column location">Localisation</div>
+            <div class="order-column">Total(&#8358;)</div>
+            <div class="order-column status-col">Status</div>
+          </div>
+          <div class="order-history order1">
+            <div class="order-column id">1</div>
+            <div class="order-column date">13-01-2019</div>
+            <div class="order-column item">Meet Pie</div>
+            <div class="order-column qty">3</div>
+            <div class="order-column">1000</div>
+            <div class="order-column location">Plateau</div>
+            <div class="order-column">3300</div>
+            <div class="order-column">En attente</div>
+          </div>
+          <div class="order-history order2">
+            <div class="order-column id">2</div>
+            <div class="order-column date">13-01-2019</div>
+            <div class="order-column item">Riz & Dindes</div>
+            <div class="order-column qty">5</div>
+            <div class="order-column">2000</div>
+            <div class="order-column location">Plateau</div>
+            <div class="order-column">10300</div>
+            <div class="order-column">Acceptées</div>
+          </div>
+          <div class="order-history order3">
+            <div class="order-column id">3</div>
+            <div class="order-column date">13-01-2019</div>
+            <div class="order-column item">Pandoyam & Isiewu</div>
+            <div class="order-column qty">1</div>
+            <div class="order-column">2000</div>
+            <div class="order-column location">Adjamé</div>
+            <div class="order-column">2500</div>
+            <div class="order-column">Réfusé</div>
+          </div>
+          <div class="order-history order4">
+              <div class="order-column id">4</div>
+              <div class="order-column date">13-01-2019</div>
+              <div class="order-column item">Saucisse</div>
+              <div class="order-column qty">3</div>
+              <div class="order-column">1000</div>
+              <div class="order-column location">Plateau</div>
+              <div class="order-column">3300</div>
+              <div class="order-column">effectué</div>
+            </div>
+          <div class="order-history order1">
+            <div class="order-column id">5</div>
+            <div class="order-column date">13-01-2019</div>
+            <div class="order-column item">Meet Pie</div>
+            <div class="order-column qty">3</div>
+            <div class="order-column">1000</div>
+            <div class="order-column location">Plateau</div>
+            <div class="order-column">3300</div>
+            <div class="order-column">En attente</div>
+          </div>
+          <div class="order-history order2">
+              <div class="order-column id">6</div>
+              <div class="order-column date">13-01-2019</div>
+              <div class="order-column item">Riz & Dindes</div>
+              <div class="order-column qty">5</div>
+              <div class="order-column">2000</div>
+              <div class="order-column location">Plateau</div>
+              <div class="order-column">10300</div>
+              <div class="order-column">Acceptées</div>
+            </div>
+          <div class="order-history order3">
+            <div class="order-column id">7</div>
+            <div class="order-column date">13-01-2019</div>
+            <div class="order-column item">Pandoyam & Isiewu</div>
+            <div class="order-column qty">1</div>
+            <div class="order-column">2000</div>
+            <div class="order-column location">Adjamé</div>
+            <div class="order-column">2500</div>
+            <div class="order-column">Réfusé</div>
+          </div>
+          <div class="order-history order4">
+            <div class="order-column id">8</div>
+            <div class="order-column date">13-01-2019</div>
+            <div class="order-column item">Saucisse</div>
+            <div class="order-column qty">3</div>
+            <div class="order-column">1000</div>
+            <div class="order-column location">Plateau</div>
+            <div class="order-column">3300</div>
+            <div class="order-column">effectué</div>
+          </div>
+        </div>
+
+        <!-- Mobile -->
+        <div class="order-mobile">
+          <div class="order1-mobile mobile">
+            <div class="head view">
+              <div class="order-column">ID</div>
+              <div class="order-column">Date</div>
+              <div class="order-column">Item</div>
+              <div class="order-column">Qté</div>
+              <div class="order-column">Cout(&#8358;)</div>
+              <div class="order-column">Localisation</div>
+              <div class="order-column">Total(&#8358;)</div>
+              <div class="order-column status-col">Status</div>
+            </div>
+            <div class="head-content view">
+              <div class="order-column">1</div>
+              <div class="order-column">13-01-2019</div>
+              <div class="order-column">Meet Pie</div>
+              <div class="order-column">3</div>
+              <div class="order-column">1000</div>
+              <div class="order-column">Plateau</div>
+              <div class="order-column">3000</div>
+              <div class="order-column status">En attente</div>
+            </div>
+          </div>
+          <div class="order2-mobile mobile">
+            <div class="head view">
+              <div class="order-column">ID</div>
+              <div class="order-column">Date</div>
+              <div class="order-column">Item</div>
+              <div class="order-column">Qté</div>
+              <div class="order-column">Cout(&#8358;)</div>
+              <div class="order-column">Localisation</div>
+              <div class="order-column">Total(&#8358;)</div>
+              <div class="order-column status-col">Status</div>
+            </div>
+            <div class="head-content view">
+              <div class="order-column">2</div>
+              <div class="order-column">13-01-2019</div>
+              <div class="order-column">Riz & Dindes</div>
+              <div class="order-column">5</div>
+              <div class="order-column">2000</div>
+              <div class="order-column">Plateau</div>
+              <div class="order-column">10000</div>
+              <div class="order-column status">Acceptées</div>
+            </div>
+          </div>
+          <div class="order3-mobile mobile">
+            <div class="head view">
+              <div class="order-column">ID</div>
+              <div class="order-column">Date</div>
+              <div class="order-column">Item</div>
+              <div class="order-column">Qté</div>
+              <div class="order-column">Cout(&#8358;)</div>
+              <div class="order-column">Localisation</div>
+              <div class="order-column">Total(&#8358;)</div>
+              <div class="order-column status-col">Status</div>
+            </div>
+            <div class="head-content view">
+              <div class="order-column">3</div>
+              <div class="order-column">13-01-2019</div>
+              <div class="order-column">Pandoyam & Isiewu</div>
+              <div class="order-column">1</div>
+              <div class="order-column">2500</div>
+              <div class="order-column">Adjamé</div>
+              <div class="order-column">2500</div>
+              <div class="order-column status">Réfusé</div>
+            </div>
+          </div>
+          <div class="order4-mobile mobile">
+            <div class="head view">
+              <div class="order-column">ID</div>
+              <div class="order-column">Date</div>
+              <div class="order-column">Item</div>
+              <div class="order-column">Qté</div>
+              <div class="order-column">Cout(&#8358;)</div>
+              <div class="order-column">Localisation</div>
+              <div class="order-column">Total(&#8358;)</div>
+              <div class="order-column status-col">Status</div>
+            </div>
+            <div class="head-content view">
+              <div class="order-column">4</div>
+              <div class="order-column">13-01-2019</div>
+              <div class="order-column">Saucisse</div>
+              <div class="order-column">3</div>
+              <div class="order-column">1000</div>
+              <div class="order-column">Plateau</div>
+              <div class="order-column">3000</div>
+              <div class="order-column status">effectué</div>
+            </div>
+          </div>
+        </div>
+        <!-- Mobile -->
+
+      </div>
+
+    </div>
+  </div>
+  <a href="food-items.html"><div class="user-front">Voir menu</div></a>
+  <div class="scroll-top">&#9652;</div>
+
+  <footer class="footer">
+    &copy; <script>
+      document.write(new Date().getFullYear());
+    </script> <strong>Babi Fast-food</strong> developed & designed by <em>Tsukoyomi</em>
+  </footer>
+
+  <script src="js/scroll.js"></script>
+  <script src="js/status.js"></script>
+</body>
+
+</html>

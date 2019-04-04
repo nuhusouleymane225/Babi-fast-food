@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>BABI FAST-FOOD | Bienvenue</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="img/logo.png">
+  <script src="js/script.js"></script>
+</head>
+
+<body>
+
+  <div class="welcome">
+    <div class="welcome-content">
+      <div class="container">
+        <h1 class="page-title">Bienvenue à <span>BABI FAST-FOOD<img src="img/logo.png" alt="logo"></span></h1>
+
+        <div class="intro">
+          <div class="delivery-girl intro-content">
+            <img src="img/delivery-girl.png" alt="delivery-girl">
+          </div>
+          <div class="intro-words intro-content">
+            <div class="words"></div>
+            <div class="progress-bar">
+              <div class="progress-color"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="auth-btn">
+          <input type="button" value="Je suis nouveau ici." id="signup">
+          <input type="button" value="Login" class="login" id="login">
+        </div>
+        <a href="menu.html" style="color: #fff;"><div style="padding-top: 20px;">Verifier Menu Disponible</div></a>
+
+      </div>
+    </div>
+    <div class="modal">
+      <div class="auth-modal-content">
+
+        <div class="auth-form">
+          <form class="form-before-click" id="signupForm">
+            <span class="close close-signup">&#10062;</span> <br>
+            <legend class="form-title">SIGNUP</legend>
+            <label for="name">Nom: </label><span class="formAlert"></span>
+            <input type="text" name="name" class="fullname" id="name" required placeholder="Entrer nom complet">
+            <label for="email">Email: </label><span class="formAlert"></span>
+            <input type="email" name="email" class="email" id="email" required placeholder="example@domain.com">
+            <label for="phone">Telephone: </label><span class="formAlert"></span>
+            <input type="phone" name="phone" class="phone" id="phone" required placeholder="Telephone (080.....)">
+            <label for="phone">Addresse: </label><span class="formAlert"></span>
+            <input type="text" name="address" class="address" id="address" required placeholder="Addresse residentielle">
+            <label for="password">Password: </label><span class="formAlert"></span>
+            <input type="password" class="password" id="password" name="password" required placeholder="Creer password">
+            <input type="submit" value="Submit">
+          </form>
+          <p>Avez vous un compte? <span id="login-modal">Login</span></p>
+        </div>
+
+        <div class="auth-form">
+          <form class="form-before-click" id="loginForm">
+            <span class="close close-login">&#10062;</span> <br>
+            <legend class="form-title">LOGIN</legend>
+            <label for="email">Email: </label><span class="formAlert"></span>
+            <input type="email" name="email" id="email1" class="email1" required placeholder="example@domain.com">
+            <label for="password">Password: </label><span class="formAlert"></span>
+            <input type="password" id="password1" class="password1" name="password" required placeholder="Entrer votre password">
+            <input type="submit" value="Submit">
+          </form>
+          <p>Je suis nouveau ici. <span id="signup-modal">Signup</span></p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <script src="js/toggle.js"></script>
+  <script src="js/fetch/utility.js"></script>
+  <script src="js/fetch/signup.js"></script>
+  <script src="js/fetch/login.js"></script>
+  <script src="js/fetch/jwt-decode.min.js"></script>
+</body>
+
+</html>

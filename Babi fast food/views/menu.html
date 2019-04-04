@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Babi Fast-Food | Menus</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="img/logo.png">
+</head>
+
+<body>
+  <header>
+    <div class="nav-bar">
+      <div class="logo">
+        <a href="index.html"><img src="img/logo.png" alt=""><span>Babi Fast-Food</span> </a>
+      </div>
+      <nav>
+        <ul>
+          <li class="username"><a href="orders.html">Profile</a></li>
+          <li class="logout"><a>Logout</a></li>
+          <li class="dropdown">
+            <span>&#8801;</span>
+            <div class="dropdown-content">
+              <a href="orders.html">Profile</a>
+              <a href="#" class="logout">Logout</a>
+            </div>
+          </li>
+      </nav>
+      <nav class="guest">
+        <ul>
+          <li class="signup-menu"><a id="signup">Signup</a></li>
+          <li class="login-menu"><a id="login">Login</a></li>
+          <li class="dropdown">
+            <span>&#8801;</span>
+            <div class="dropdown-content">
+              <a href="#" id="signupDrop">Signup</a>
+              <a href="#" id="loginDrop">Login</a>
+            </div>
+          </li>
+      </nav>
+    </div>
+  </header>
+  <div class="pageAlert">
+
+  </div>
+
+  <div class="foodContainer">
+
+  </div>
+
+  <div class="modal">
+    <div class="auth-modal-content">
+
+      <div class="auth-form">
+        <form class="form-before-click" id="signupForm">
+          <span class="close close-signup">&#10062;</span> <br>
+          <legend class="form-title">SIGNUP</legend>
+          <label for="name">Nom: </label><span class="formAlert"></span>
+          <input type="text" name="name" class="fullname" id="name" required placeholder="Entrer nom complet">
+          <label for="email">Email: </label><span class="formAlert"></span>
+          <input type="email" name="email" class="email" id="email" required placeholder="example@domain.com">
+          <label for="phone">Telephone: </label><span class="formAlert"></span>
+          <input type="phone" name="phone" class="phone" id="phone" required placeholder="Telephone (080.....)">
+          <label for="phone">Addresse: </label><span class="formAlert"></span>
+          <input type="text" name="address" class="address" id="address" required placeholder="Addresse Residentielle">
+          <label for="password">Password: </label><span class="formAlert"></span>
+          <input type="password" class="password" id="password" name="password" required placeholder="Créer password">
+          <input type="submit" value="Submit">
+        </form>
+        <p>Avez vous un compte? <span id="login-modal">Login</span></p>
+      </div>
+
+      <div class="auth-form">
+        <form class="form-before-click" id="loginForm">
+          <span class="close close-login">&#10062;</span> <br>
+          <legend class="form-title">LOGIN</legend>
+          <label for="email">Email: </label><span class="formAlert"></span>
+          <input type="email" name="email" id="email1" class="email1" required placeholder="example@domain.com">
+          <label for="password">Password: </label><span class="formAlert"></span>
+          <input type="password" id="password1" class="password1" name="password" required placeholder="Entrer votre password">
+          <input type="submit" value="Submit">
+        </form>
+        <p>Je suis nouveau ici. <span id="signup-modal">Signup</span></p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="toggle-cart" id="toggle-cart">
+    <strong>CARTE </strong><span>&#9832; <em class="counter"></em></span>
+  </div>
+
+  <div class="cart-modal">
+    <div class="cart-dashboard">
+      <div class="cart-items">
+  
+      </div>
+      <div class="cartTotal"></div>
+      <div class="order-cart" id="cartDiv">
+        <form class="order-form">
+          <div class="decide">
+            Livrer à domicile? Oui: <input type="checkbox" value="" checked><br>
+          </div>
+          Non: &nbsp; <input type="text" placeholder="Entrer lieu de livraison" class="deliver-to" minlength="5" maxlength="100"><br>
+          <input type="submit" value="Submit Commande" id="cartBtn">
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-top">&#9652;</div>
+  <a href="menu-admin.html" class="admin-view">
+    <div class="user-front">Admin dashboard</div>
+  </a>
+
+  <footer class="footer">
+    &copy; <script>
+      document.write(new Date().getFullYear());
+    </script> <strong>Babi Fast-Food</strong> developed & designed by <em>Tsukoyomi</em>
+  </footer>
+
+  <script src="js/fetch/utility.js"></script>
+  <script src="js/fetch/menu.js"></script>
+  <script src="js/toggle.js"></script>
+  <script src="js/fetch/toggle-cart.js"></script>
+  <script src="js/fetch/signup.js"></script>
+  <script src="js/fetch/login.js"></script>
+  <script src="js/fetch/jwt-decode.min.js"></script>
+  <script src="js/fetch/logout.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>BABI Fast-Food | Commandes</title>
+  <link rel="stylesheet" href="css/orders.css">
+  <link rel="icon" type="image/png" href="img/logo.png">
+</head>
+
+<body>
+  <div class="dashboard">
+    <div class="dashboard-menu">
+      <div class="menu-top">
+        <div class="welcome">
+          <a href="food-items.html"><img src="img/logo.png" alt="logo"></a>
+          <span><a href="food-items.html">Babi Fast-Food</a> </span>
+        </div>
+        <a href="#">
+          <div class="menu menu1">Ajouter Item &#10148;</div>
+        </a>
+        <a href="admin-food-items.html">
+          <div class="menu menu1">Menus &#10148;</div>
+        </a>
+        <a href="admin-orders.html">
+          <div class="menu menu2">Toutes les commandes &#10148;</div>
+        </a>
+      </div>
+      <div class="menu-bottom"></div>
+    </div>
+    <div class="dashboard-content">
+      <div class="dashboard-content-bg">
+        <div class="page-title">AJOUTER PLAT</div>
+        <div class="add-food-item">
+          <form action="admin-food-items.html">
+            <label for="item">Plat</label>
+            <input type="text" placeholder="Plat">
+            <label for="description">Description</label>
+            <input type="text" placeholder="Description plat">
+            <div class="sub-input">
+              <div class="price">
+                <label for="price">Prix</label>
+                <input type="text" placeholder="Prix">
+              </div>
+              <div class="quantity">
+                <label for="quantity">Quantité</label>
+                <input type="number" placeholder="Quantité disponible">
+              </div>
+            </div>
+            <label for="category">Categorie</label>
+            <input type="text" placeholder="Categorie">
+            <input type="submit" value="Submit">
+          </form>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+  
+  <div class="scroll-top">&#9652;</div>
+  <a href="food-items.html"><div class="user-front">Voir menu</div></a>
+
+  <footer class="footer">
+    &copy; <script>
+      document.write(new Date().getFullYear());
+    </script> <strong>BABI Fast-Food</strong> developed & designed by <em>Tsukoyomi</em>
+  </footer>
+
+  <script src="js/scroll.js"></script>
+  <script src="js/status.js"></script>
+</body>
+
+</html>

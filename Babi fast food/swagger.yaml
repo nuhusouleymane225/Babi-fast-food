@@ -1,0 +1,378 @@
+swagger: "2.0"
+info:
+  description: "API documentation for Fast-Food-Fast, a food delivery service app for a restaurant."
+  version: "1.0.0"
+  title: "Fast-Food-Fast"
+  termsOfService: "http://swagger.io/terms/"
+  contact:
+    email: "marcus2cu@gmail.com"
+  license:
+    name: "Apache 2.0"
+    url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+host: "marcus-fast-food-fast.herokuapp.com"
+basePath: "/api/v1"
+tags:
+- name: "Users"
+  description: "User API Endpoint"
+- name: "Menus"
+  description: "Menu API Endpoint"
+- name: "Orders"
+  description: "Order API Endpoint"
+schemes:
+- "https"
+- "http"
+paths:
+  /auth/signup:
+    post:
+      tags:
+        - "Users"
+      summary: "Create a new user"
+      description: "Create new user on Fast-Food-Fast"
+      operationId: "signupUser"
+      consumes:
+        - "application/json"
+      produces:
+        - "application/json"
+      parameters:
+        - in: "body"
+          name: "user"
+          description: "Create new user account"
+          required: true
+          schema:
+            $ref: "#/definitions/SignupUser"
+      responses:
+        201:
+          description: "You are signed up succesfully"
+        409:
+          description: "Email already exist"
+        400:
+          description: "Bad request"
+  /auth/login:
+    post:
+      tags:
+        - "Users"
+      summary: "Login a user"
+      description: "Login an existing user into Fast-Food-Fast"
+      operationId: "loginUser"
+      consumes:
+        - "application/json"
+      produces:
+        - "application/json"
+      parameters:
+        - in: "body"
+          name: "user"
+          description: "Login an existing user"
+          required: true
+          schema:
+            $ref: "#/definitions/LoginUser"
+      responses:
+        200:
+          description: "Login was successful"
+        401:
+          description: "Incorrect password"
+        404:
+          description: "Email not found"
+  /menu:
+    post:
+      tags:
+        - "Menus"
+      summary: "Post a menu"
+      description: "Creates an new menu"
+      operationId: "postMenu"
+      produces:
+        - "application/json"
+      parameters:
+        - in: "body"
+          name: "menu"
+          description: "Create a new menu on Fast-Food-Fast"
+          required: true
+          schema:
+            $ref: "#/definitions/PostMenu"
+        - in: "query"
+          name: "token"
+          description: "Provide to token to access this endpoint"
+          required: true
+          type: "string"
+      responses:
+        201:
+          description: "Menu created successfully"
+        400:
+          description: "Invalid input field"
+        403:
+          description: "No token supplied"
+    get:
+      tags:
+        - "Menus"
+      summary: "Get available menu"
+      description: "Get menu that its quantity is above zero"
+      operationId: "getAvailableMenu"
+      produces:
+        - "application/json"
+      responses:
+        200:
+          description: "successful operation"
+        404:
+          description: "No menu created at this time"
+  /orders:
+    post:
+      tags:
+        - "Orders"
+      summary: "Post an order"
+      description: "Post an order on available meal"
+      operationId: "postOrder"
+      produces:
+      - "application/json"
+      parameters:
+        - in: "body"
+          name: "order"
+          description: "Post an order on Fast-Food-Fast"
+          required: true
+          schema:
+            $ref: "#/definitions/PostOrder"
+        - in: "query"
+          name: "token"
+          description: "Provide to token to access this endpoint"
+          required: true
+          type: "string"
+      responses:
+        200:
+          description: "successful operation"
+        400:
+          description: "Invalid input field"
+        404:
+          description: "This menu does not exist"
+    get:
+      tags:
+        - "Orders"
+      summary: "Get all orders on Fast-Food-Fast"
+      description: "Get all orders"
+      operationId: "getAllOrders"
+      produces:
+        - "application/json"
+      parameters:
+        - in: "query"
+          name: "token"
+          description: "Provide to token to access this endpoint"
+          required: true
+          type: "string"
+      responses:
+        200:
+          description: "successful operation"
+        400:
+          description: "Invalid input field"
+        404:
+          description: "No orders to view at this time"
+  /users/{userId}/orders:
+    get:
+      tags:
+        - "Orders"
+      summary: "Get specific user order history"
+      description: "Get user order history on Fast-Food-Fast"
+      operationId: "getSpecificUserOrderHistory"
+      produces:
+        - "application/json"
+      parameters:
+        - name: "userId"
+          in: "path"
+          description: "Id of the specific user"
+          required: true
+          type: "integer"
+        - in: "query"
+          name: "token"
+          description: "Provide to token to access this endpoint"
+          required: true
+          type: "string"
+      responses:
+        200:
+          description: "successful operation"
+        400:
+          description: "Invalid input field"
+        404:
+          description: "No orders to view at this time"
+  /orders/{orderId}:
+    get:
+      tags:
+        - "Orders"
+      summary: "Get specific user order history"
+      description: "Get specific order on Fast-Food-Fast"
+      operationId: "getSpecificOrder"
+      produces:
+        - "application/json"
+      parameters:
+        - name: "orderId"
+          in: "path"
+          description: "Id of the specific order"
+          required: true
+          type: "integer"
+        - in: "query"
+          name: "token"
+          description: "Provide to token to access this endpoint"
+          required: true
+          type: "string"
+      responses:
+        200:
+          description: "successful operation"
+        400:
+          description: "Invalid input field"
+        404:
+          description: "No orders to view at this time"
+  /orders/{orderId}/process:
+    put:
+      tags:
+        - "Orders"
+      summary: "process sepcific order"
+      description: "Update the order status to processing"
+      operationId: "processSpecificOrder"
+      produces:
+        - "application/json"
+      parameters:
+        - name: "orderId"
+          in: "path"
+          description: "Id of the specific order to be processed"
+          required: true
+          type: "integer"
+        - in: "query"
+          name: "token"
+          description: "Provide to token to access this endpoint"
+          required: true
+          type: "string"
+          schema:
+            $ref: "#/definitions/PostOrder"
+      responses:
+        200:
+          description: "successful operation"
+        400:
+          description: "Invalid URL. Invalid orderId"
+        404:
+          description: "This order doesn not exist"
+  /orders/{orderId}/cancel:
+    put:
+      tags:
+        - "Orders"
+      summary: "cancel sepcific order"
+      description: "Update the order status to cancelled"
+      operationId: "cancelSpecificOrder"
+      produces:
+        - "application/json"
+      parameters:
+        - name: "orderId"
+          in: "path"
+          description: "Id of the specific order to be cancelled"
+          required: true
+          type: "integer"
+        - in: "query"
+          name: "token"
+          description: "Provide to token to access this endpoint"
+          required: true
+          type: "string"
+          schema:
+            $ref: "#/definitions/PostOrder"
+      responses:
+        200:
+          description: "successful operation"
+        400:
+          description: "Invalid URL. Invalid orderId"
+        404:
+          description: "This order doesn not exist"
+  /orders/{orderId}/complete:
+    put:
+      tags:
+        - "Orders"
+      summary: "complete sepcific order"
+      description: "Update the order status to completed"
+      operationId: "completeSpecificOrder"
+      produces:
+        - "application/json"
+      parameters:
+        - name: "orderId"
+          in: "path"
+          description: "Id of the specific order to be completed"
+          required: true
+          type: "integer"
+        - name: "token"
+          in: "query"
+          description: "Provide to token to access this endpoint"
+          required: true
+          type: "string"
+          schema:
+            $ref: "#/definitions/PostOrder"
+      responses:
+        200:
+          description: "successful operation"
+        400:
+          description: "Invalid URL. Invalid orderId"
+        404:
+          description: "This order doesn not exist"
+definitions:
+  SignupUser:
+    type: "object"
+    required:
+      - name
+      - email
+      - phone
+      - address
+      - pasword
+    properties:
+      name:
+        type: "string"
+        uniqueItems: false
+      email:
+        type: "string"
+        uniqueItems: true
+      phone:
+        type: "string"
+        uniqueItems: true
+      address:
+        type: "string"
+        uniqueItems: false
+      password:
+        type: "string"
+        uniqueItems: false
+  LoginUser:
+    type: "object"
+    required:
+      - email
+      - password
+    properties:
+      email:
+        type: "string"
+        uniqueItems: true
+      password:
+        type: "string"
+        uniqueItems: true
+  PostMenu:
+    type: "object"
+    required:
+      - menu
+      - description
+      - category
+      - quantity
+      - price
+    properties:
+      menu:
+        type: "string"
+        uniqueItems: true
+      description:
+        type: "string"
+        uniqueItems: false
+      category:
+        type: "string"
+        uniqueItems: false
+      quantity:
+        type: "integer"
+        uniqueItems: false
+      price:
+        type: "integer"
+        uniqueItems: false
+  PostOrder:
+    type: "object"
+    required:
+      - mealId
+      - quantity
+    properties:
+      mealId:
+        type: "integer"
+        uniqueItems: true
+      quantity:
+        type: "integer"
+        uniqueItems: false

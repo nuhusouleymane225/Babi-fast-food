@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Babi Fast-Food | Non-autorisé</title>
+  <link rel="stylesheet" href="css/orders.css">
+  <link rel="icon" type="image/png" href="img/logo.png">
+</head>
+
+<body>
+  <div class="dashboard">
+    <div class="dashboard-content">
+      <div class="dashboard-content-bg">
+        <div class="page-title"></div>
+
+        <div class="unauthorized">
+          <div class="head-smiley">&#9786;</div>
+          <h1>Accès non autorisé</h1>
+            <p>
+              Chargement des menus &nbsp;<span class="loader"></span>
+            </p>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="footer">
+    &copy; <script>
+      setInterval(() => {
+        document.querySelector('.loader').style.display = 'inline-block';
+      }, 300);
+      setTimeout(() => location.assign('menu.html'), 3000);
+      document.write(new Date().getFullYear());
+    </script> <strong>Babi Fast-Food</strong> developed & designed by <em>Tsukoyomi</em>
+  </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Babi Fast-Food | Bienvenue</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="img/logo.png">
+  <script src="js/script.js"></script>
+</head>
+
+<body>
+
+  <div class="welcome">
+    <div class="welcome-content">
+      <div class="container">
+        <h1 class="page-title">Bienvenue à <span>BABI FAST-FOOD<img src="img/logo.png" alt="logo"></span></h1>
+
+        <div class="intro">
+          <div class="delivery-girl intro-content">
+            <img src="img/delivery-girl.png" alt="delivery-girl">
+          </div>
+          <div class="intro-words intro-content">
+            <div class="words"></div>
+            <div class="progress-bar">
+              <div class="progress-color"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="auth-btn">
+          <input type="button" value="Je suis nouveau ici" id="signup">
+          <input type="button" value="Login" class="login" id="login">
+        </div>
+
+      </div>
+    </div>
+    <div class="modal">
+      <div class="auth-modal-content">
+
+        <div class="auth-form">
+          <form action="food-items.html" class="form-before-click">
+            <span class="close close-signup">&#10062;</span> <br>
+            <legend class="form-title">Signup</legend>
+            <label for="name">Nom</label>
+            <input type="text" name="name" id="name" required placeholder="Entrer nom complet">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required placeholder="example@domain.com">
+            <label for="phone">Telephone</label>
+            <input type="text" name="phone" id="phone" required placeholder="Telephone (080.....)">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required placeholder="Créer password">
+            <input type="submit" value="Submit">
+          </form>
+          <p>Avez vous un compte? <span id="login-modal">Login</span></p>
+        </div>
+
+        <div class="auth-form">
+          <form action="food-items.html" class="form-before-click">
+            <span class="close close-login">&#10062;</span> <br>
+            <legend class="form-title">Login</legend>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email1" required placeholder="example@domain.com">
+            <label for="password">Password</label>
+            <input type="password" id="password1" name="password" required placeholder="Entrer votre password">
+            <input type="submit" value="Submit">
+          </form>
+          <p>Je suis nouveau ici. <span id="signup-modal">Signup</span></p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <script src="js/toggle.js"></script>
+</body>
+
+</html>
